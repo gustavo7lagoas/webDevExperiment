@@ -6,55 +6,85 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <style type="text/css">
+<style type="text/css">
 
-        body {
-            margin:0;
-        }
-        #topbar {
-            background-color:#790000;
-            width:100%;
-            height:40px;
-            color:white;
-            font-family: arial,helvetica,sans-serif;
-        }
+    body {
+        margin:0;
+    }
+    #topbar {
+        background-color:#790000;
+        width:100%;
+        height:40px;
+        color:white;
+        font-family: arial,helvetica,sans-serif;
+        font-size:0.9em;
+        font-weight:bold;
+    }
 
-        #mainbar {
-            background-color:#990000;
-            width:100%;
-            height:90px;
-        }
+    #mainbar {
+        background-color:#990000;
+        width:100%;
+        height:90px;
+    }
 
-        .fixedwidth {
-            width:1000px;
-            margin:0 auto;
-        }
+    .fixedwidth {
+        width:1000px;
+        margin:0 auto;
+    }
 
-        #logodiv {
-            padding:5px 20px 0 10px;
-            float:left;
-            border-right:1px solid #880000;
-        }
+    #logodiv {
+        padding:5px 20px 2px 10px;
+        float:left;
+        border-right:1px solid #880000;
+    }
 
-        #signindiv {
-            font-weight:bold;
-            font-size:0.9em;
-            border-right:1px solid #880000;
-            width:200px;
-            height:100%;
+    #signindiv {
+        border-right:1px solid #880000;
+        width:100px;
+        float:left;
+        padding:6px 20px 10px 20px;
 
-        }
+    }
 
-        #signindiv img {
-            /* Neither margin nor padding here the author choose relative position */
-            position:relative;
-            top:5px;
-        }
+    #signindiv img {
+        /* Neither margin nor padding here the author choose relative position */
+        position:relative;
+        top:5px;
+    }
 
-        #signindiv p {
-            padding-left:20px;
-        }
-    </style>
+    #topmenudiv {
+        float:left;
+    }
+
+    #topmenudiv ul {
+        margin-top:0;
+        padding:0;
+    }
+
+    #topmenudiv li {
+        list-style:none;
+        border-right:1px solid #880000;
+        height:100%;
+        padding:12px 20px 12px 20px;
+        float:left;
+    }
+
+    #searchdiv {
+        float:left;
+        padding:8px 0 8px 15px;
+    }
+
+    #searchdiv input {
+        height:24px;
+        padding-left:10px;
+        border:none; /* it is none, not 0 */
+        font-size:1.2em;
+        background-image:url("images/search_logo.png");
+        background-repeat:no-repeat;
+        background-position:right center;
+    }
+
+</style>
 
 </head>
 <body>
@@ -67,7 +97,22 @@
                     <img src="images/bbc_logo.png" />
                 </div>
                 <div id="signindiv">
-                    <p><img src="images/login_logo.png" width="20" height="20" /> Sign In</p>
+                    <img src="images/login_logo.png" width="20" height="20" /> Sign In
+                </div>
+                <div id="topmenudiv">
+                    <ul>
+                        <li>News</li>
+                        <li>Sport</li>
+                        <li>Weather</li>
+                        <li>Earth</li>
+                        <li>Future</li>
+                        <li>More...</li>
+                    </ul>
+                </div>
+                <div id="searchdiv">
+                    <form>
+                        <input type="text" placeholder="Search" />
+                    </form>
                 </div>
             </div>
         </div>

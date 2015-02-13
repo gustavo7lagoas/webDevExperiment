@@ -82,6 +82,7 @@
         background-color:#990000;
         width:100%;
         height:90px;
+        color:white;
     }
 
     .break {
@@ -92,9 +93,9 @@
     #newsbar p {
         margin: 0;
         padding: 0;
-        color:white;
         padding-top: 10px;
         padding-left:10px;
+        float:left;
     }
 
     #newsheader {
@@ -108,7 +109,40 @@
 
     #rss {
         float:right;
+        margin-top:40px;
     }
+
+    #rss img {
+        position:relative;
+        height:14px;
+        top:2px;
+    }
+
+    #sections {
+        background-color:#3E0C0D;
+    }
+
+    #sections ul {
+        margin: 0;
+        padding:5px 0 4px 0;
+        height:15px;
+    }
+
+    #sections li {
+        list-style:none;
+        font-size:0.8em;
+        float:left;
+        margin: 0;
+    }
+
+    #sections p {
+        margin: 0;
+        padding-top: 0;
+        border-right:1px solid #990000;
+        padding-left: 4px;
+        padding-right: 5px;
+    }
+
 
 </style>
 
@@ -150,8 +184,29 @@
 
                 <p id="newsheader">NEWS<span id="br">BR</span></p>
 
-                <div id="rss">RSS</div>
+                <div id="rss">
+                    RSS
+                    <img id="rss_logo" src="images/rss.png" />
+                </div>
 
+                <div class="break"></div>
+
+                <div id="sections">
+                    <ul>
+                        <li><p>Home</p></li>
+                        <li><p>World</p></li>
+                        <li><p>Africa</p></li>
+                        <li><p>Asia</p></li>
+                        <li><p>Australia</p></li>
+                        <li><p>Latin America</p></li>
+                        <li><p>Mid-East</p></li>
+                        <li><p>US &amp; Canada</p></li>
+                        <li><p>Business</p></li>
+                        <li><p>Health</p></li>
+                        <li><p>Sci/Environment</p></li>
+                        <li><p style="border-right:none">Tech</p></li>
+                    </ul>
+                </div>
             </div>
 
         </div>

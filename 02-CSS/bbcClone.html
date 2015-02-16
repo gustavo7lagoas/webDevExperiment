@@ -11,6 +11,7 @@
     body {
         margin:0;
     }
+
     #topbar {
         background-color:#790000;
         width:100%;
@@ -83,6 +84,7 @@
         width:100%;
         height:90px;
         color:white;
+        opacity:1;
     }
 
     .break {
@@ -96,6 +98,12 @@
         padding-top: 10px;
         padding-left:10px;
         float:left;
+    }
+
+    #backimg {
+        opacity:0.8;
+        filter: alpha(opacity=60); /* For IE8 and earlier */
+        background-image:url("images/background.jpg");
     }
 
     #newsheader {
@@ -138,18 +146,30 @@
     #sections p {
         margin: 0;
         padding-top: 0;
-        border-right:1px solid #990000;
+        border-right:1px solid #5B2D2F;
         padding-left: 4px;
         padding-right: 5px;
     }
 
+    .selected {
+        background-color: #EDEDED;
+        color: #505050;
+        height: 20px;
+        position: relative;
+        top: -5px;
+        padding-top: 5px;
+        z-index: 1;
+    }
 
+    .selected p {
+        border-right-color: transparent !important;
+    }
 </style>
 
 </head>
 <body>
 
-    <div id="container">
+    <div class="backimg" id="container">
 
         <div id="topbar">
             <div class="fixedwidth">
@@ -180,32 +200,35 @@
             <div class="break"></div>
 
         <div id="newsbar">
-            <div class="fixedwidth">
+            <div id="backimg">
 
-                <p id="newsheader">NEWS<span id="br">BR</span></p>
+                <div class="fixedwidth">
 
-                <div id="rss">
-                    RSS
-                    <img id="rss_logo" src="images/rss.png" />
-                </div>
+                    <p id="newsheader">NEWS<span id="br">BR</span></p>
 
-                <div class="break"></div>
+                    <div id="rss">
+                        RSS
+                        <img id="rss_logo" src="images/rss.png" />
+                    </div>
 
-                <div id="sections">
-                    <ul>
-                        <li><p>Home</p></li>
-                        <li><p>World</p></li>
-                        <li><p>Africa</p></li>
-                        <li><p>Asia</p></li>
-                        <li><p>Australia</p></li>
-                        <li><p>Latin America</p></li>
-                        <li><p>Mid-East</p></li>
-                        <li><p>US &amp; Canada</p></li>
-                        <li><p>Business</p></li>
-                        <li><p>Health</p></li>
-                        <li><p>Sci/Environment</p></li>
-                        <li><p style="border-right:none">Tech</p></li>
-                    </ul>
+                    <div class="break"></div>
+
+                    <div id="sections">
+                        <ul>
+                            <li><p>Home</p></li>
+                            <li class="selected"><p>World</p></li>
+                            <li><p>Africa</p></li>
+                            <li><p>Asia</p></li>
+                            <li><p>Australia</p></li>
+                            <li><p>Latin America</p></li>
+                            <li><p>Mid-East</p></li>
+                            <li><p>US &amp; Canada</p></li>
+                            <li><p>Business</p></li>
+                            <li><p>Health</p></li>
+                            <li><p>Sci/Environment</p></li>
+                            <li><p style="border-right:none">Tech</p></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 

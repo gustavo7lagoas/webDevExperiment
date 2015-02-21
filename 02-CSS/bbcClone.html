@@ -1,0 +1,422 @@
+<!doctype html>
+<html>
+<head>
+    <title>Gustavo's BBC Clone</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+
+    body {
+        margin:0;
+    }
+
+    #topbar {
+        background-color:#790000;
+        width:100%;
+        height:40px;
+        color:white;
+        font-family: arial,helvetica,sans-serif;
+        font-size:0.9em;
+        font-weight:bold;
+    }
+
+    .fixedwidth {
+        width:1000px;
+        margin:0 auto;
+    }
+
+    #logodiv {
+        padding:5px 20px 2px 10px;
+        float:left;
+        border-right:1px solid #880000;
+    }
+
+    #signindiv {
+        border-right:1px solid #880000;
+        width:130px;
+        float:left;
+        padding:6px 20px 10px 20px;
+
+    }
+
+    #signindiv img {
+        /* neither margin nor padding here the author choose relative position */
+        position:relative;
+        top:5px;
+    }
+
+    #topmenudiv {
+        float:left;
+    }
+
+    #topmenudiv ul {
+        margin-top:0;
+        padding:0;
+    }
+
+    #topmenudiv li {
+        list-style:none;
+        border-right:1px solid #880000;
+        height:100%;
+        font-size:0.9em;
+        padding:12px;
+        float:left;
+    }
+
+    #searchdiv {
+        padding:7px 0 7px 15px;
+        float:right;
+    }
+
+    #searchdiv input {
+        height:23px;
+        width:140px;
+        padding-left:10px;
+        border:none; /* it is none, not 0 */
+        font-size:1.2em;
+        background-image:url("images/search_logo.png");
+        background-repeat:no-repeat;
+        background-position:right center;
+    }
+
+    #newsbar {
+        background-color:#990000;
+        width:100%;
+        height:90px;
+        color:white;
+        opacity:1;
+    }
+
+    .break {
+        clear:both;
+        background-color:green;
+    }
+
+    #newsbar p {
+        margin: 0;
+        padding: 0;
+        padding-top: 10px;
+        padding-left:10px;
+        float:left;
+    }
+
+    #backimg {
+        opacity:0.8;
+        filter: alpha(opacity=60); /* for ie8 and earlier */
+        background-image:url("images/background.jpg");
+    }
+
+    #newsheader {
+        font-size:3em;
+    }
+
+    #br {
+        font-size:0.7em;
+        padding-left:10px;
+    }
+
+    #rss {
+        float:right;
+        margin-top:40px;
+    }
+
+    #rss img {
+        position:relative;
+        height:14px;
+        top:2px;
+    }
+
+    #sections {
+        background-color:#3e0c0d;
+    }
+
+    #sections ul {
+        margin: 0;
+        padding:5px 0 4px 0;
+        height:15px;
+    }
+
+    #sections li {
+        list-style:none;
+        font-size:0.8em;
+        float:left;
+        margin: 0;
+    }
+
+    #sections p {
+        margin: 0;
+        padding-top: 0;
+        border-right:1px solid #5b2d2f;
+        padding-left: 4px;
+        padding-right: 5px;
+    }
+
+    #sections .selected {
+        background-color: #ededed;
+        color: #505050;
+        height: 20px;
+        position: relative;
+        top: -5px;
+        padding-top: 5px;
+        z-index: 1;
+    }
+
+    #sections .selected p {
+        border-right-color: transparent;
+    }
+
+    #content {
+        width:100%;
+        font-size:0.85em;
+        color:#535353;
+    }
+
+    .date {
+        font-weight:bold;
+    }
+
+    #content hr {
+        margin-top:2px;
+        margin-bottom:2px;
+        color:#1f527b;
+    }
+
+    #content h1 {
+        color:#1f4f82;
+        font-size:2.3em;
+        margin: 0;
+        font-family: arial, helmet, freesans, sans-serif;
+    }
+
+    .headlineimage {
+        float:left;
+        padding-top:10px;
+    }
+
+    .newsitem {
+        position:relative;
+        width:220px;
+        left:10px;
+        top:10px;
+        float:left;
+    }
+
+    .newsitem p {
+        margin:0;
+        padding-bottom:5px;
+    }
+
+    .newsitem a {
+        color:#1F4F82;
+        text-decoration:none;
+        font-family: arial, helmet, freesans, sans-serif;
+    }
+
+    .newsitem a:hover {
+        text-decoration:underline;
+    }
+
+    .video {
+        background-image:url("images/triangle.png");
+        background-size: 16px 13px;
+        background-repeat:no-repeat;
+        background-position:left center;
+        padding-left:20px;
+    }
+
+    .links {
+        line-height:1.5;
+    }
+
+    .new {
+        color:#810000;
+        font-weight:bold;
+        font-size:0.9em;
+    }
+
+    .graybox {
+        float:right;
+        background-color:#EDEDED;
+        width: 336px;
+        position:relative;
+        top:-30px;
+        height:200px;
+    }
+
+    .features-header {
+        color: #1F4F82;
+        margin: 0;
+        padding: 8px;
+        font-size:2em;
+    }
+
+    .features-header a {
+        text-decoration:none;
+    }
+
+    .features-header a:hover {
+        text-decoration:underline;
+    }
+
+    .feature-header {
+        list-style:none;
+        margin: 0;
+        padding:5px 8px 5px 8px;
+        height:15px;
+    }
+
+    .feature-header li {
+        list-style:none;
+        color: #1F4F82;
+        padding-bottom:8px;
+    }
+
+    .feature-header img {
+        float:left;
+        padding-right: 8px;
+    }
+
+    .feature-header a {
+        text-decoration:none;
+        font-size:1.2em;
+    }
+
+    .feature-header a:hover {
+        text-decoration:underline;
+    }
+
+    .feature-header p {
+        margin: 8px 0 8px 0;
+        color:#535353;
+
+    }
+
+</style>
+
+</head>
+<body>
+
+    <div id="container">
+
+        <div id="topbar">
+            <div class="fixedwidth">
+                <div id="logodiv">
+                    <img src="images/bbc_logo.png" />
+                </div>
+                <div id="signindiv">
+                    <img src="images/login_logo.png" width="20" height="20" /> Sign In
+                </div>
+                <div id="topmenudiv">
+                    <ul>
+                        <li>News</li>
+                        <li>Sport</li>
+                        <li>Weather</li>
+                        <li>Earth</li>
+                        <li>Future</li>
+                        <li>Shop</li>
+                        <li>TV</li>
+                    </ul>
+                </div>
+                <div id="searchdiv">
+                    <form>
+                        <input type="text" placeholder="Search" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="break"></div>
+
+        <div id="newsbar">
+            <div id="backimg">
+
+                <div class="fixedwidth">
+
+                    <p id="newsheader">NEWS<span id="br">BR</span></p>
+
+                    <div id="rss">
+                        RSS
+                        <img id="rss_logo" src="images/rss.png" />
+                    </div>
+
+                    <div class="break"></div>
+
+                    <div id="sections">
+                        <ul>
+                            <li><p>Home</p></li>
+                            <li class="selected"><p>World</p></li>
+                            <li><p>Africa</p></li>
+                            <li><p>Asia</p></li>
+                            <li><p>Australia</p></li>
+                            <li><p>Latin America</p></li>
+                            <li><p>Mid-East</p></li>
+                            <li><p>US &amp; Canada</p></li>
+                            <li><p>Business</p></li>
+                            <li><p>Health</p></li>
+                            <li><p>Sci/Environment</p></li>
+                            <li><p style="border-right:none">Tech</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="break"></div>
+
+        <div id="content">
+
+            <div class="fixedwidth">
+                <p><span class="date">16 February 2015</span> Last Updated 15:21</p>
+                <hr>
+                <h1>Egypt bombs IS targets in Libya</h1>
+                <img class="headlineimage" src="images/headlineimage.jpg" />
+                <div class="newsitem">
+                    <p>Egypt says it has bombed Islamic State targets in Libya, 
+                hours after video emerged showing the apparent beheadings of
+                21 Egyptian Christians.</p>
+
+                <p class="links"><a class="video" href="#">Air strike footage released <span class="new">NEW</span></a></br>
+                    <a href="#">How strong is Islamic State in Libya?</a></br>
+                    <a href="#">The Coptic victims <span class="new">NEW</span></a></br>
+                    <a class="video" href="#">Who are Coptic Christians?</a></p>
+
+                </div>
+
+                <div class="graybox">
+                    <h2 class="features-header">
+                        <a ref="#">Magazine</a>
+                    </h2>
+                    <ul class="feature-header">
+                        <li>
+                            <a href="#">
+                                <img src="images/goldstatue.jpg">
+                                Bad goods
+                            </a>
+                            <p>
+                                The men smuggling and selling the loot that funds Islamic State
+                            </p>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="images/survivors.jpg">
+                                A pitiful journey
+                            </a>
+                            <p>
+                                Feeling the misery of migrants on heaving Mediterranean wave
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+

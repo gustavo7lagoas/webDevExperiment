@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning CSS</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style type="text/css">
+
+        .large {
+            font-size:200%;
+        }
+
+        #green {
+            color:green;
+        }
+
+        .underline {
+            text-decoration:underline;
+        }
+        .bold {
+            font-weight:bold;
+        }
+        .purpleBox {
+            background-color:purple;
+            width:200px;
+            height:200px;
+            position:fixed;
+            z-index:1;
+        }
+        .blueBox {
+            background-color:blue;
+            width:100px;
+            height:300px;
+            z-index:3;
+        }
+        .clear {
+            clear:both;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="purpleBox">
+        <p>The third <span class="underline large bold">word</span> in this
+        paragraph is underlined.</p>
+    </div>
+
+    <div class="blueBox">
+        <p class="large">This is some text.</p>
+    </div>
+
+    <div class="blueBox">
+        <p class="large">This is some text.</p>
+    </div>
+
+    <br \>
+
+    <div class="blueBox">
+        <p class="large">This is some text.</p>
+    </div>
+
+    <p id="green" class="large">This is some more text.</p>
+
+</body>
+</html>

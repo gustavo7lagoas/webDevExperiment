@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+ <head>
+    <title>Learning Javascript - Arrays</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ </head>
+
+ <body>
+
+    <button id="arrayButton">Change It!</button>
+
+    <hr>
+
+    <div id="superText">any text can be put here!</div>
+
+    <script type="text/javascript">
+
+        var myArray = new Array();
+
+        myArray = ["pizza", "chocolate"];
+
+        myArray.push("tropeiro");
+
+        myArray.splice(1, 0, "pastel"); //adds remove elements from array
+
+        console.log(myArray);
+
+        document.getElementById("arrayButton").onclick=function() {
+
+            document.getElementById("superText").innerHTML=myArray[0];
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+    body {
+        font-family:Verdana, Geneva, sans-serif;
+    }
+
+    #gamebox {
+        width: 200px;
+        height: 200px;
+        background-color: green;
+        visibility: hidden;
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+

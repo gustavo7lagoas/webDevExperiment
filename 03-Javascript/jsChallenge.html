@@ -9,11 +9,19 @@
 
     <style>
 
+        body {
+            font-family:Verdana, Geneva, sans-serif;
+        }
+
         #gamebox {
             width: 200px;
             height: 200px;
             background-color: green;
             visibility: hidden;
+        }
+
+        .bold {
+            font-weight: bold;
         }
 
     </style>
@@ -22,71 +30,15 @@
 
  <body>
 
+    <h1>Test your reactions</h1>
+
+    <p>Click on the boxes and circles as quickly as you can</p>
+
+    <p class="bold">Reaction Time:&nbsp;<span id="reactionTime">0</span>s</p>
+
     <div id="gamebox"></div>
 
-    <h1>Reaction Time:&nbsp;<span id="reactionTime"></span></h1>
-
-    <script>
-
-        /*
-         * the visibility trick could be done with style.display none/block
-         */
-        var clickedTime, createdTime, reactionTime;
-
-        function vanishBox() {
-
-            document.getElementById("gamebox").style.visibility="hidden";
-
-        }
-
-        function materializeBox() {
-
-            var timeout = Math.random() * 2000;
-            var randomPos = Math.floor(Math.random()*500);
-            var randomCircle = Math.floor(Math.random()*2);
-
-            setTimeout(function() {
-
-                if(Math.random() > 0.5) {
-                    document.getElementById("gamebox").style.borderRadius = "100px";
-                } else {
-                    document.getElementById("gamebox").style.borderRadius = "0px";
-                }
-                document.getElementById("gamebox").style.backgroundColor = getRandomColor();
-                document.getElementById("gamebox").style.visibility = "visible";
-                document.getElementById("gamebox").style.marginLeft = randomPos + 'px';
-
-                createdTime = Date.now();
-
-            }, timeout);
-
-        }
-
-        function getRandomColor() {
-            var letters = '0123456789ABCDEF'.split('');
-            var color = '#';
-            for (var i = 0; i < 6; i++ ) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-
-        document.getElementById("gamebox").onclick=function() {
-
-            clickedTime = Date.now();
-            reactionTime = (clickedTime - createdTime)/1000;
-
-            vanishBox();
-
-            materializeBox();
-
-            document.getElementById("reactionTime").innerHTML=reactionTime;
-
-        };
-
-        materializeBox();
-
-    </script>
+    <script type="text/javascript" src="reactionGame.js"></script>
 
 </body>
 </html>

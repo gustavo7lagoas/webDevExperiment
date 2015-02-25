@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ </head>
+
+ <body>
+
+    <p>What is the weather?</p>
+    <input type="text" id="weather" placeholder="your forecast here!"></input>
+
+    <button id="answerButton">Submit!</button>
+
+    <hr>
+
+    <div id="superText">any text can be put here!</div>
+
+    <script type="text/javascript">
+
+        var weatherProvided = document.getElementById("weather").value;
+
+        document.getElementById("answerButton").onclick = function (){
+
+            weatherProvided = document.getElementById("weather").value;
+
+            if(weatherProvided === "rainy") {
+                alert("Bring the umbrella");
+            } else {
+                alert("Go to the Beach!");
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+ <head>
+    <title>Learning Javascript</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ </head>
+
+ <body>
+
+    <p>How many Fingers?</p>
+    <input type="text" id="userGuess" placeholder="your guess here!"></input>
+
+    <button id="answerButton">Submit!</button>
+
+    <hr>
+
+    <script type="text/javascript">
+
+        var fingers, guess;
+
+        document.getElementById("answerButton").onclick = function (){
+
+            fingers = Math.random();
+            fingers = Math.floor(6*fingers);
+            guess = document.getElementById("userGuess").value;
+
+            if(fingers === Number(guess)) {
+                alert("Brillant!");
+            } else {
+                alert("Try Again! My number was: " + fingers);
+            }
+
+        }
+
+
+    </script>
+
+</body>
+</html>

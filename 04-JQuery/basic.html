@@ -12,8 +12,8 @@
 
         .red-square {
             background-color: red;
-            width: 50px;
-            height: 50px;
+            width: 100px;
+            height: 100px;
             margin-top: 10px;
         }
 
@@ -46,17 +46,15 @@
 
     <p>This is some text!</p>
 
-    <iframe src="http://globo.com"></iframe>
-
     <script type="text/javascript">
 
         // Query elements
         $('div.red-square').click(function() {
-            alert('Div Clicked');
+            alert($('div.red-square').css('width'));
         });
 
-        $('a').click(function() {
-            alert('link Clicked');
+        $('div').click(function() {
+            $(this).css('width', "200px");
         });
 
         // Changing website content
@@ -65,18 +63,20 @@
         });
 
         $('.green-circle').hover(function() {
-            alert("why not?");
-            $('p').html("New text!");
+            $('.red-square').fadeOut();
+            //$('.red-square').css('visibility', "hidden");
+            //$('.red-square').css('display', "none");
         });
 
         $('.red-square').click(function() {
             alert($('p').html());
         });
 
-        $('.red-square').hover(function() {
-            alert("why not");
+        /*$('.red-square').hover(function() {
             $('iframe').attr("src", "http://cnn.com");
-        });
+        });*/
+
+
 
     </script>
 

@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <title>Code Player JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+    <script type='text/javascript' src='lib/codePlayer.js'></script>
+
+    <link rel="stylesheet" href="./lib/jquery-ui-1.11.3/jquery-ui.css" />
+    <link rel="stylesheet" href='./lib/jquery-ui-1.11.3/jquery-ui.theme.css' />
+    <link rel="stylesheet" href='./lib/codePlayer.css' />
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div id='logo'>CodePlayer</div>
+        <div id='buttonDiv'>
+            <button id='btnRun'>RUN</button>
+        </div>
+        <ul id='codePlayerOptions'>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JS</li>
+            <li class="lastPlayerOption" style="border:none">Result</li>
+        </ul>
+
+    </header>
+
+    <div class="break"></div>
+
+    <section>
+        <column id='htmlTab' class='tab'></column>
+        <column id='cssTab' class='tab'></column>
+        <column id='jsTab' class='tab'></column>
+        <column id='resultTab'></column>
+    </section>
+
+    <div id="alertError"></div>
+
+</body>
+</html>

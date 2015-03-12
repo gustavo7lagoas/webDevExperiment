@@ -24,34 +24,32 @@
             <button id='btnRun'>RUN</button>
         </div>
         <ul id='codePlayerOptions'>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li class="lastPlayerOption" style="border:none">Result</li>
+            <li class='codePlayerOption selected' id='htmlButton'>HTML</li>
+            <li class='codePlayerOption selected' id='cssButton'>CSS</li>
+            <li class='codePlayerOption selected' id='jsButton'>JS</li>
+            <li class='codePlayerOption selected' id='resultButton' class="lastPlayerOption" style="border:none">Result</li>
         </ul>
 
     </header>
 
     <div class="break"></div>
 
-    <div>
-        <div id='htmlTab' class='tab'>
-            <textarea id='htmlCode' class='codeTextArea'></textarea>
-            <span class='tabTag'>HTML</span>
-        </div>
-        <div id='cssTab' class='tab'>
-            <textarea id='cssCode' class='codeTextArea'></textarea>
-            <span class='tabTag'>CSS</span>
-        </div>
-        <div id='jsTab' class='tab'>
-            <textarea id='jsCode' class='codeTextArea'></textarea>
-            <span class='tabTag'>JS</span>
-        </div>
-        <div id='resultTab'class='lastTab'>
-        </div>
+    <div id='htmlTab' class='tab'>
+        <textarea id='htmlCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>HTML</div>
     </div>
-
-    <div id="alertError"></div>
+    <div id='cssTab' class='tab'>
+        <textarea id='cssCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>CSS</div>
+    </div>
+    <div id='jsTab' class='tab'>
+        <textarea id='jsCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>JS</div>
+    </div>
+    <div id='resultTab'class='lastTab'>
+        <div class='tabTag'>Result</div>
+        <iframe></iframe>
+    </div>
 
 </body>
 </html>

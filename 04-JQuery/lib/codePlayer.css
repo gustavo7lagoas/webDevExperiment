@@ -29,7 +29,7 @@
 
 #codePlayerOptions {
     margin: 0 auto;
-    width: 228px;
+    width: 222px;
     list-style: none;
     border: 1px solid gray;
     border-radius: 5px;
@@ -44,6 +44,10 @@
     border-right: 1px solid gray;
     padding: 8px;
     height: 50%;
+}
+
+#codePlayerOptions .selected {
+    background-color: darkgrey;
 }
 
 #buttonDiv {
@@ -61,19 +65,20 @@
 }
 
 .tab {
-    height: -moz-calc(100% - 40px);
-    height: -webkit-calc(100% - 40px);
-    height: calc(100% - 40px);
+    position: relative;
+    height: -moz-calc(100% - 45px);
+    height: -webkit-calc(100% - 45px);
+    height: calc(100% - 45px);
     display: block;
     width: 25%;
     float: left;
-    border-right: 1px solid gray;
 }
 
 .lastTab {
-    height: -moz-calc(100% - 40px);
-    height: -webkit-calc(100% - 40px);
-    height: calc(100% - 40px);
+    position: relative;
+    height: -moz-calc(100% - 45px);
+    height: -webkit-calc(100% - 45px);
+    height: calc(100% - 45px);
     display: block;
     width: -moz-calc(25% - 3px);
     width: -webkit-calc(25% - 3px);
@@ -82,16 +87,29 @@
 }
 
 .tabTag {
-    position: relative;
+    position: absolute;
     top: 20px;
     right: 20px;
     background-color: white;
-    border: 1px solid darkgrey;
+    border: 1px solid gray;
     height: 16px;
     padding: 5px;
     float: right;
 }
 
 .codeTextArea {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-right: 1px solid darkgrey;
+    font-family: monotype;
+    font-size: 90%;
+}
 
+iframe {
+    border: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }

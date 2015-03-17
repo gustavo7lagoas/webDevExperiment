@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>I will disappear!!!</h1>
+
+    <script type="text/javascript">
+
+        // should not use this
+        /*$.get('test.html', function(data) {
+            alert(data);
+        });*/
+
+        // much better with more control
+        /*$.ajax({
+            url: "test.html"
+        }).done(function(data) {
+            alert(data);
+        });*/
+
+        /*
+        $.ajax({
+            url: 'test.html'
+        }).done(function(data) {
+            $('h1').html(data);
+        });*/
+
+        $.ajax({
+            url: 'test.html'
+        }).done(function(data) {
+            $('h1').append(data);
+        });
+
+    </script>
+
+</body>
+</html>

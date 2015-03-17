@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+
+    <style>
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <p class="fadder">I will disappear!!!</p>
+
+    <button id="houdini">Houdini effect!</button>
+
+    <button id="getBack">Applauses!</button>
+
+    <script type="text/javascript">
+
+        // Query elements
+        $('#houdini').click(function() {
+            $('.fadder').fadeOut(1000, function() {
+                alert("Fade out complete");
+            });
+        });
+
+        $('#getBack').click(function() {
+            $('.fadder').fadeIn('fast');
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>Code Player JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+    <script type='text/javascript' src='lib/codePlayer.js'></script>
+
+    <link rel="stylesheet" href="./lib/jquery-ui-1.11.3/jquery-ui.css" />
+    <link rel="stylesheet" href='./lib/jquery-ui-1.11.3/jquery-ui.theme.css' />
+    <link rel="stylesheet" href='./lib/codePlayer.css' />
+
+</head>
+
+<body>
+
+    <header id="header">
+        <div id='logo'>CodePlayer</div>
+        <div id='buttonDiv'>
+            <button id='btnRun'>RUN</button>
+        </div>
+        <ul id='codePlayerOptions'>
+            <li class='codePlayerOption selected' id='htmlButton'>HTML</li>
+            <li class='codePlayerOption selected' id='cssButton'>CSS</li>
+            <li class='codePlayerOption selected' id='jsButton'>JS</li>
+            <li class='codePlayerOption selected' id='resultButton' class="lastPlayerOption" style="border:none">Result</li>
+        </ul>
+
+    </header>
+
+    <div class="break"></div>
+
+    <div id='htmlTab' class='tab'>
+        <textarea id='htmlCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>HTML</div>
+    </div>
+    <div id='cssTab' class='tab'>
+        <textarea id='cssCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>CSS</div>
+    </div>
+    <div id='jsTab' class='tab'>
+        <textarea id='jsCode' class='codeTextArea'></textarea>
+        <div class='tabTag'>JS</div>
+    </div>
+    <div id='resultTab'class='tab'>
+        <div class='tabTag'>Result</div>
+        <iframe id='resultFrame'></iframe>
+    </div>
+
+</body>
+</html>

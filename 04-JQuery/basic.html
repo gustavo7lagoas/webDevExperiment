@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+
+    <style>
+
+        .red-square {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .green-circle {
+            background-color: green;
+            width: 50px;
+            height: 50px;
+            float: left;
+            border-radius: 25px;
+            margin-top: 10px;
+        }
+
+        .clear {
+            clear:both;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="red-square"></div>
+
+    <div class="red-square"></div>
+
+    <div class="green-circle"></div>
+
+    <div class="clear"></div>
+
+    <p>This is some text!</p>
+
+    <script type="text/javascript">
+
+        // Query elements
+        $('div.red-square').click(function() {
+            alert($('div.red-square').css('width'));
+        });
+
+        $('div').click(function() {
+            $(this).css('width', "200px");
+        });
+
+        // Changing website content
+        $('.green-circle').click(function() {
+            $('p').html("New text!");
+        });
+
+        $('.green-circle').hover(function() {
+            $('.red-square').fadeOut();
+            //$('.red-square').css('visibility', "hidden");
+            //$('.red-square').css('display', "none");
+        });
+
+        $('.red-square').click(function() {
+            alert($('p').html());
+        });
+
+        /*$('.red-square').hover(function() {
+            $('iframe').attr("src", "http://cnn.com");
+        });*/
+
+
+
+    </script>
+
+</body>
+</html>

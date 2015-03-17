@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+    <title>Learning JQuery</title> 
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script type="text/javascript" src="lib/jquery-1.11.2.min.js"></script>
+
+    <link rel="stylesheet" href="./lib/jquery-ui-1.11.3/jquery-ui.css">
+    <script type="text/javascript" src="lib/jquery-ui-1.11.3/jquery-ui.min.js"></script>
+
+    <style>
+
+        .green-square {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .red-square {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            margin-top: 10px;
+        }
+
+        .clear {
+            clear:both;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="green-square">drag me arround!</div>
+
+    <div class="red-square">resize me!</div>
+
+    <script type="text/javascript">
+
+        $('.green-square').draggable();
+
+        //$('.red-square').resizable();
+
+        $('.red-square').droppable({
+            drop: function(event, ui) {
+                if($('.red-square').css('backgroundColor') ===  "rgb(255, 0, 0)") {
+                    $('.red-square').css('backgroundColor', 'yellow');
+                } else {
+                    $('.red-square').css('backgroundColor', 'red');
+                }
+            }
+        });
+
+    </script>
+
+</body>
+</html>

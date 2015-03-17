@@ -29,13 +29,13 @@
 
 #codePlayerOptions {
     margin: 0 auto;
-    width: 225px;
     list-style: none;
     border: 1px solid gray;
     border-radius: 5px;
     height: 32px;
     position: relative;
     top: 3px;
+    display: table;
 }
 
 #codePlayerOptions li {
@@ -44,6 +44,9 @@
     border-right: 1px solid gray;
     padding: 8px;
     height: 50%;
+    display: table-cell;
+    width: auto;
+    table-layout: auto;
 }
 
 #codePlayerOptions .selected {

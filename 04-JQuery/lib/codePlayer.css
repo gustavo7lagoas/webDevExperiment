@@ -29,7 +29,7 @@
 
 #codePlayerOptions {
     margin: 0 auto;
-    width: 222px;
+    width: 225px;
     list-style: none;
     border: 1px solid gray;
     border-radius: 5px;
@@ -74,18 +74,6 @@
     float: left;
 }
 
-.lastTab {
-    position: relative;
-    height: -moz-calc(100% - 45px);
-    height: -webkit-calc(100% - 45px);
-    height: calc(100% - 45px);
-    display: block;
-    width: -moz-calc(25% - 3px);
-    width: -webkit-calc(25% - 3px);
-    width: calc(25% - 3px);
-    float: left;
-}
-
 .tabTag {
     position: absolute;
     top: 20px;
@@ -104,6 +92,8 @@
     border-right: 1px solid darkgrey;
     font-family: monotype;
     font-size: 90%;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
 iframe {

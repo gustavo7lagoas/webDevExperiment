@@ -38,25 +38,4 @@ $(document).ready(function() {
         runCode();
     });
 
-    // Use jquery filter to return all displayed divs
-    // Get the number of displayed divs
-    // Calculate de size and apply to
-    // Box sizing attribute : border-box
-
-
-    /*$('#cssButton').click(function() {
-        $(this).toggleClass('clicked');
-        toggleTab('#cssTab');
-    });
-
-    $('#jsButton').click(function() {
-        $(this).toggleClass('clicked');
-        toggleTab('#jsTab');
-    });
-
-    $('#resultButton').click(function() {
-        $(this).toggleClass('clicked');
-        toggleTab('#resultTab');
-    });*/
-
 });

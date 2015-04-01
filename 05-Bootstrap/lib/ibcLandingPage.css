@@ -1,0 +1,61 @@
+.navbar-brand {
+    padding: 5px;
+}
+
+#mainContent {
+    background-image: url('./imgs/1200px-Ponte_Hercílio_Luz_Florianopolis.jpg');
+    width: 100%;
+    background-size: cover;
+}
+
+#firstColumn {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#firstColumn h1 {
+    font-size: 300%;
+}
+
+.margin-top {
+    margin-top: 30px;
+}
+
+#activities {
+    width: 100%;
+}
+
+.weekdaylist {
+}
+
+.dayActivities {
+    padding: 20px;
+}
+
+.subTitle {
+    text-align: center;
+    size: 1.5em;
+    margin: 0;
+    padding 10px;
+}
+
+.paragraphContent {
+    padding: 20px;
+}
+
+#calendar {
+    margin: 30px;
+}
+
+#calendar-container {
+    width: 80%;
+    margin: auto;
+}
+
+#footer {
+    background-color: #222222;
+    width: 100%;
+    font-size: 120%;
+    padding-left : 30px;
+}
+

@@ -9,6 +9,8 @@
 
     <!-- Bootstrap -->
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/bootstrap-calendar/css/calendar.css">
+    <link rel='stylesheet' href='./lib/ResponsiveSlides.js/responsiveslides.css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -17,57 +19,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <style>
+    <link href='./lib/ibcLandingPage.css' rel='stylesheet'>
 
-        .navbar-brand {
-            padding: 5px;
-        }
-
-        #mainContent {
-            background-image: url('./lib/1200px-Ponte_Hercílio_Luz_Florianopolis.jpg');
-            width: 100%;
-            background-size: cover;
-        }
-
-        #firstColumn {
-            margin-top: 100px;
-            text-align: center;
-        }
-
-        #firstColumn h1 {
-            font-size: 300%;
-        }
-
-        #activities {
-            width: 100%;
-        }
-
-        .weekdaylist {
-        }
-
-        .dayActivities {
-            padding: 20px;
-        }
-
-        .subTitle {
-            text-align: center;
-            size: 1.5em;
-            margin: 0;
-            padding 10px;
-        }
-
-        .paragraphContent {
-            padding: 20px;
-        }
-
-        #footer {
-            background-color: #222222;
-            width: 100%;
-            font-size: 120%;
-            padding-left : 30px;
-        }
-
-    </style>
   </head>
   <body data-spy='scroll' data-target='#namelist'>
     <div class='navbar navbar-inverse navbar-fixed-top'>
@@ -80,7 +33,7 @@
             <span class="icon-bar"></span>
           </button>
           <a href='#' class='navbar-brand'>
-              <img alt='IBC logo' src='./lib/ibcLogo.png' />
+              <img alt='IBC logo' src='./lib/imgs/ibcLogo.png' />
           </a>
         </div>
         <div class='collapse navbar-collapse' id='namelist'>
@@ -114,6 +67,7 @@
                         <div class='input-group-addon'>@</div>
                         <input type='email' class='form-control' id='emailSignIn' placeholder='Seu email aqui!' />
                     </div>
+                    <input type='submit' class='btn btn-success btn-lg margin-top'>
                 </div>
             </div>
         </div>
@@ -121,91 +75,33 @@
 
     <div class='container' id='activities'>
         <div class='row'>
+            <div class='col-md-10 col-md-offset-1'>
+                <p class='lead'>Eventos em destaque</p>
+                <div class='featured'>
+                    <ul class="rslides">
+                        <li><img src='./lib/imgs/academia-da-alma-divulga.jpg' alt='academia da alma'></li>
+                        <li><img src='./lib/imgs/cartaz-retiro-ibc-2015.jpg' alt='retiro fam&iacute;lias'></li>
+                        <li><img src='./lib/imgs/dnadiscipulado-01.png' alt='dna discipulado'></li>
+                        <li><img src='./lib/imgs/ebd-divulgaa.jpg' alt='escola b&iacute;iblica dominical'></li>
+                        <li><img src='./lib/imgs/min-de-homens-face.jpg' alt='minist&eacute;rio de homens'></li>
+                        <li><img src='./lib/imgs/ministerio-de-mulheres-imagem.jpg' alt='minist&eacute;rio de mulheres'></li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class='col-md-8 col-md-offset-2'>
+                <div id='calendar-container'>
+                    <p class='lead'>Aqui estão todas as atividades da IBC neste ano</p>
+                    <div id='calendar'></div>
+                </div>
+            </div>
+        </div>
+
+        <div class='row'>
             <div class='col-md-6 col-md-offset-3'>
                 <h2 class='subTitle'><span class='glyphicon glyphicon-calendar'>&nbsp;ATIVIDADES</h2>
                 <p class='paragraphContent'>Fique por dentro de toda programação que ocorre na IBC. Durante a semana são várias atividades e serviços oferecidos à comunidade. Estamos esperando sua visita.</p>
             </div>
-
-        </div>
-
-        <div class='row'>
-
-            <div class='col-md-4 weekdaylist'>
-
-                <div class='dayActivities'>
-
-                    <h3 class='text-center'>TERÇA</h3>
-
-                    <ul>
-                        <li>Discipulado DNA - 20h</li>
-                        <li>Estudo Bíblico - 20h</li>
-                    </ul>
-
-                </div>
-
-            </div>
-
-            <div class='col-md-4 weekdaylist'>
-
-                <div class='dayActivities'>
-                    <h3 class='text-center'>QUARTA</h3>
-                    <ul>
-                        <li>Cursos de Artesanato - 13:30h</li>
-                    <ul>
-                </div>
-
-            </div>
-
-            <div class='col-md-4 weekdaylist'>
-
-                <div class='dayActivities'>
-                    <h3 class='text-center'>QUINTA</h3>
-
-                    <ul>
-                        <li>Reunião das Mulheres 19:30h</li>
-                        <li>Reunião dos Homens 19:30h</li>
-                        <li>Kairós Encontro de Meninas (13-17 anos) - 19:30h</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class='row'>
-
-            <div class='col-md-4 weekdaylist'>
-
-                <h3 class='text-center'>SEXTA</h3>
-
-                <ul>
-                    <li>Ensaio da Equipe de Louvor 19:30h</li>
-                </ul>
-
-            </div>
-
-            <div class='col-md-4 weekdaylist'>
-
-                <h3 class='text-center'>SÁBADO</h3>
-
-                <ul>
-                    <li>Encontro da Juventude 19:30h</li>
-                </ul>
-
-           </div>
-
-           <div class='col-md-4 weekdaylist'>
-
-               <h3 class='text-center'>DOMINGO</h3>
-
-               <ul>
-                   <li>Estudo Bíblico 10h</li>
-                   <li>Culto da Noite 19:30h</li>
-               </ul>
-
-            </div>
-
         </div>
 
     </div>
@@ -215,13 +111,9 @@
 
             <div class='col-md-6'>
                 <p>Igreja Batista em Carianos ® Todos os direitos reservados</p>
-
                 <p>Av Alberto Santos Dumont, 660, Carianos - CEP 88047-678 - Florianópoils/SC Fone +55 (48) 3236 0059</p>
-
                 <p>CNPJ: 03.357.697/0001-40   |   Banco do Brasil, Agência: 4641-8 - Conta Corrente: 7023-8</p>
-
                 <p>Atendimento na secretaria da igreja de segunda a sexta, das 13:30 as 17:30.</p>
-
             </div>
 
         </div>
@@ -232,10 +124,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-calendar/components/underscore/underscore-min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-calendar/js/calendar.js"></script>
+    <script type='text/javascript' src='./lib/ResponsiveSlides.js/responsiveslides.min.js'></script>
 
     <script>
         $('#mainContent').css('height', $(window).height());
     </script>
 
+    <script>
+        var calendar = $('#calendar').calendar(
+                {
+                    tmpl_path:'./lib/bootstrap-calendar/tmpls/',
+                    events_source: function () { return []; }
+                });
+    </script>
+    <script>
+        $(function() {
+            $(".rslides").responsiveSlides({
+                nav: true
+            });
+        });
+    </script>
   </body>
 </html>

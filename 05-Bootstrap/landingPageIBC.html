@@ -75,10 +75,10 @@
 
     <div class='container' id='activities'>
         <div class='row'>
-            <div class='col-md-10 col-md-offset-1'>
-                <p class='lead'>Eventos em destaque</p>
+            <div class='col-md-8 col-md-offset-2'>
+                <h2 class='subTitle'><span class='glyphicon glyphicon-thumbs-up'>&nbsp;Destaques</h2>
                 <div class='featured'>
-                    <ul class="rslides">
+                    <ul class='rslides large_btn_nav'>
                         <li><img src='./lib/imgs/academia-da-alma-divulga.jpg' alt='academia da alma'></li>
                         <li><img src='./lib/imgs/cartaz-retiro-ibc-2015.jpg' alt='retiro fam&iacute;lias'></li>
                         <li><img src='./lib/imgs/dnadiscipulado-01.png' alt='dna discipulado'></li>
@@ -90,17 +90,11 @@
             </div>
 
             <div class='col-md-8 col-md-offset-2'>
-                <div id='calendar-container'>
-                    <p class='lead'>Aqui estão todas as atividades da IBC neste ano</p>
-                    <div id='calendar'></div>
-                </div>
-            </div>
-        </div>
-
-        <div class='row'>
-            <div class='col-md-6 col-md-offset-3'>
                 <h2 class='subTitle'><span class='glyphicon glyphicon-calendar'>&nbsp;ATIVIDADES</h2>
                 <p class='paragraphContent'>Fique por dentro de toda programação que ocorre na IBC. Durante a semana são várias atividades e serviços oferecidos à comunidade. Estamos esperando sua visita.</p>
+                <div id='calendar-container'>
+                    <div id='calendar'></div>
+                </div>
             </div>
         </div>
 
@@ -121,9 +115,10 @@
     </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type='text/javascript' src="./lib/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-calendar/js/language/pt-BR.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-calendar/components/underscore/underscore-min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-calendar/js/calendar.js"></script>
     <script type='text/javascript' src='./lib/ResponsiveSlides.js/responsiveslides.min.js'></script>
@@ -135,6 +130,7 @@
     <script>
         var calendar = $('#calendar').calendar(
                 {
+                    language: 'pt-BR',
                     tmpl_path:'./lib/bootstrap-calendar/tmpls/',
                     events_source: function () { return []; }
                 });
@@ -142,7 +138,9 @@
     <script>
         $(function() {
             $(".rslides").responsiveSlides({
-                nav: true
+                nav: true,
+                prevText: '<',
+                nextText: '>'
             });
         });
     </script>

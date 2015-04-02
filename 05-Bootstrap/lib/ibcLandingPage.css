@@ -22,10 +22,9 @@
 }
 
 #activities {
+    background-image: url('./imgs/cloud_background.jpg');
+    background-size: cover;
     width: 100%;
-}
-
-.weekdaylist {
 }
 
 .dayActivities {
@@ -36,7 +35,31 @@
     text-align: center;
     size: 1.5em;
     margin: 0;
-    padding 10px;
+    padding: 10px;
+}
+
+.large-btns_nav:active {
+    opacity: 1.0;
+}
+
+.large-btns_nav.next {
+    left: auto;
+    background-position: right 50%;
+    right: 0;
+}
+
+.large-btns_nav {
+    z-index: 3;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    opacity: 0.6;
+    text-indent: -9999px;
+    overflow: hidden;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: #000 url("themes.gif") no-repeat left 50%;
+    width: 38px;
 }
 
 .paragraphContent {

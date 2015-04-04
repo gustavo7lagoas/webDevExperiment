@@ -40,7 +40,7 @@
             <ul class='nav navbar-nav'>
                 <li class='active'><a href='#mainContent'>Conheça a IBC</a></li>
                 <li><a href='#activities'>Atividades</a></li>
-                <li><a href='#contact'>Endereço</a></li>
+                <li><a href='#footer'>Endereço</a></li>
             </ul>
             <form class='navbar-form navbar-right'>
                 <div class='form-group'>
@@ -76,9 +76,9 @@
     <div class='container' id='activities'>
         <div class='row'>
             <div class='col-md-8 col-md-offset-2'>
-                <h2 class='subTitle'><span class='glyphicon glyphicon-thumbs-up'>&nbsp;Destaques</h2>
+                <h2 class='subTitle'>Destaques</h2>
                 <div class='featured'>
-                    <ul class='rslides large_btn_nav'>
+                    <ul class='rslides large-btns'>
                         <li><img src='./lib/imgs/academia-da-alma-divulga.jpg' alt='academia da alma'></li>
                         <li><img src='./lib/imgs/cartaz-retiro-ibc-2015.jpg' alt='retiro fam&iacute;lias'></li>
                         <li><img src='./lib/imgs/dnadiscipulado-01.png' alt='dna discipulado'></li>
@@ -122,6 +122,8 @@
     <script type="text/javascript" src="./lib/bootstrap-calendar/components/underscore/underscore-min.js"></script>
     <script type="text/javascript" src="./lib/bootstrap-calendar/js/calendar.js"></script>
     <script type='text/javascript' src='./lib/ResponsiveSlides.js/responsiveslides.min.js'></script>
+    <script type='text/javascript' src='./lib/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js'>
+
 
     <script>
         $('#mainContent').css('height', $(window).height());
@@ -135,12 +137,20 @@
                     events_source: function () { return []; }
                 });
     </script>
+
+    <script>
+        $('ul.navbar-nav a').smoothScroll();
+    </script>
+
     <script>
         $(function() {
             $(".rslides").responsiveSlides({
+                auto: false,
+                pager: false,
                 nav: true,
-                prevText: '<',
-                nextText: '>'
+                prevText: 'Previous',
+                nextText: 'Next',
+                namespace: 'large-btns'
             });
         });
     </script>

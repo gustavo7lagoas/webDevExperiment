@@ -28,14 +28,24 @@
     margin-top: 30px;
 }
 
+.support {
+    height: 300px;
+    background-color: #373435;
+    color: #FFF;
+    margin: 0;
+    width: 100%;
+}
+
+.support h2 {
+    font-weight: 300;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
 #activities {
     background-image: url('./imgs/cloud_background.jpg');
     background-size: cover;
     width: 100%;
-}
-
-.dayActivities {
-    padding: 20px;
 }
 
 .subTitle {
@@ -52,45 +62,69 @@
   width: 100%;
 }
 
-.large-btns_nav {
-    z-index: 3;
-    position: absolute;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    opacity: 0.6;
-    text-indent: -9999px;
+.rslides {
+    position: relative;
+    list-style: none;
     overflow: hidden;
-    top: 0;
-    bottom: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.rslides li {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    display: inline;
+    width: 100%;
     left: 0;
-    background: #000 url("./ResponsiveSlides.js/demo/themes/themes.gif") no-repeat left 50%;
-    width: 38px;
+    top: 0;
 }
 
-.large-btns_nav:active {
-    opacity: 1.0;
+.rslides li:first-child {
+    position: relative;
+    display: block;
+    float: left;
 }
 
-.large-btns_nav.next {
-    left: auto;
-    background-position: right 50%;
-    right: 0;
+.rslides img {
+    display: block;
+    height: auto;
+    float: left;
+    width: 100%;
+    border: 0;
 }
 
-.large-btns_nav:focus {
-  outline: none;
+.rslides_tabs {
+    background-color: #373435;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.rslides_tabs li {
+    padding: 7px;
+    display:inline-block; 
+    display:inline; /*IE7*/
+    zoom:1; /*IE7*/
+    margin-right:10px;
+}
+
+.rslides_tabs a {
+     text-decoration: none;
+     font-size: 1.5em;
+     color: #FFF;
+}
+
+.rslides_tabs .rslides_here a {
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    font-weight: bold;
 }
 
 .paragraphContent {
     padding: 20px;
-}
-
-#calendar {
-    margin: 30px;
-}
-
-#calendar-container {
-    width: 80%;
-    margin: auto;
 }
 
 #footer {

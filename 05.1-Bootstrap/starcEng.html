@@ -9,8 +9,6 @@
 
     <!-- Bootstrap -->
     <link href="./lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./lib/bootstrap-calendar/css/calendar.css">
-    <link rel='stylesheet' href='./lib/ResponsiveSlides.js/responsiveslides.css'>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,15 +31,15 @@
             <span class="icon-bar"></span>
           </button>
           <a href='#' class='navbar-brand'>
-              <img alt='IBC logo' src='./lib/imgs/ibcLogo.png' />
+              <img alt='IBC logo' src='./lib/imgs/logo.png' height="40px" width="40px" />
           </a>
         </div>
         <div class='collapse navbar-collapse' id='namelist'>
             <ul class='nav navbar-nav'>
                 <li class='active'><a href='#mainContent'>Início</a></li>
-                <li><a href='#activities'>Empresa</a></li>
-                <li><a href='#footer'>Serviços</a></li>
-                <li><a href='#footer'>Projetos</a></li>
+                <li><a href='#company'>Empresa</a></li>
+                <li><a href='#value'>Serviços</a></li>
+                <li><a href='#projects'>Projetos</a></li>
                 <li><a href='#footer'>Clientes</a></li>
                 <li><a href='#footer'>Contato</a></li>
             </ul>
@@ -74,7 +72,23 @@
         </div>
     </div>
 
-    <div class='container' id='activities'>
+    <div class="container support" id="company">
+        <div class='row'>
+            <div class="col-md-10 col-md-offset-1">
+                <h2 class='subTitle'>Empresa</h2>
+                <p>A STARC tem, em seu alicerce, transparência e respeito 
+                ao cliente. Seus diretores e colaboradores seguem a 
+                filosofia de maxima transparência e honestidade e estão 
+                sempre dispostos a atender aos clientes da melhor maneira 
+                possível. Com larga experiência em variados tipos de obras, 
+                a STARC possui um banco de dados de referência, que a 
+                auxilia a realizar estimativas apuradas de custos em 
+                prazos reduzidos, de acordo com as características de 
+                cada empreendimento.</p>
+            </div>
+        </div>
+    </div>
+    <div class='container' id='projects'>
         <div class='row'>
             <div class='col-md-8 col-md-offset-2'>
                 <h2 class='subTitle'>Destaques</h2>
@@ -119,24 +133,12 @@
     <script type='text/javascript' src="./lib/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type='text/javascript' src="./lib/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="./lib/bootstrap-calendar/js/language/pt-BR.js"></script>
-    <script type="text/javascript" src="./lib/bootstrap-calendar/components/underscore/underscore-min.js"></script>
-    <script type="text/javascript" src="./lib/bootstrap-calendar/js/calendar.js"></script>
-    <script type='text/javascript' src='./lib/ResponsiveSlides.js/responsiveslides.min.js'></script>
+    <script type='text/javascript' src='./lib/responsiveslides.min.js'></script>
     <script type='text/javascript' src='./lib/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js'>
 
 
     <script>
         $('#mainContent').css('height', $(window).height());
-    </script>
-
-    <script>
-        var calendar = $('#calendar').calendar(
-                {
-                    language: 'pt-BR',
-                    tmpl_path:'./lib/bootstrap-calendar/tmpls/',
-                    events_source: function () { return []; }
-                });
     </script>
 
     <script>
@@ -147,11 +149,7 @@
         $(function() {
             $(".rslides").responsiveSlides({
                 auto: false,
-                pager: false,
-                nav: true,
-                prevText: 'Previous',
-                nextText: 'Next',
-                namespace: 'large-btns'
+                pager: true
             });
         });
     </script>

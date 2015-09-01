@@ -29,7 +29,7 @@
 }
 
 .support {
-    height: 300px;
+    height: 400px;
     background-color: #373435;
     color: #FFF;
     margin: 0;
@@ -40,12 +40,26 @@
     font-weight: 300;
     margin-top: 50px;
     margin-bottom: 30px;
+    color: #96989A;
 }
 
-#activities {
-    background-image: url('./imgs/cloud_background.jpg');
-    background-size: cover;
-    width: 100%;
+.support p {
+    margin-bottom: 20px;
+}
+
+#services {
+    background-color: #FFF;
+}
+
+#services .row {
+    height: 150px;
+    padding-top: 25px;
+    color: #373435;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align: center;
 }
 
 .subTitle {

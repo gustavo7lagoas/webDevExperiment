@@ -29,32 +29,43 @@
 }
 
 .support {
-    height: 400px;
     background-color: #373435;
     color: #FFF;
     margin: 0;
     width: 100%;
+    padding: 40px 0;
 }
 
 .support h2 {
     font-weight: 300;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     color: #96989A;
+    padding: 0;
 }
 
 .support p {
     margin-bottom: 20px;
 }
 
-#services {
+.secondary {
     background-color: #FFF;
 }
 
 #services .row {
-    height: 150px;
-    padding-top: 25px;
     color: #373435;
+    padding
+}
+
+#services .col {
+    padding-top: 25px;
+}
+
+#services .row h3 {
+   text-align: center;
+}
+
+.last {
+    padding-bottom: 25px;
 }
 
 .centered {
@@ -67,13 +78,6 @@
     size: 1.5em;
     margin: 0;
     padding: 10px;
-}
-
-.featured {
-  margin-bottom: 50px;
-  position: relative;
-  float: left;
-  width: 100%;
 }
 
 .rslides {

@@ -3,7 +3,7 @@
 }
 
 #mainContent {
-    background-image: url('./imgs/1200px-Ponte_Hercílio_Luz_Florianopolis.jpg');
+    background-image: url('./imgs/background_2.jpg');
     width: 100%;
     height: 600px;
     background-size: cover;
@@ -11,17 +11,14 @@
 
 #mainContent h1 {
     margin-top: 175px;
-    font-weight: 300;
+    font-weight: 600;
+    font-size: 4em;
     text-transform: uppercase;
 }
 
 #firstColumn {
     margin-top: 100px;
     text-align: center;
-}
-
-#firstColumn h1 {
-    font-size: 300%;
 }
 
 .margin-top {
@@ -48,12 +45,21 @@
 }
 
 .secondary {
+    padding: 30px 0;
     background-color: #FFF;
+}
+
+.secondary h2 {
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.btn .login {
+    margin-top: 20px;
 }
 
 #services .row {
     color: #373435;
-    padding
 }
 
 #services .col {
@@ -73,11 +79,16 @@
     text-align: center;
 }
 
+.img_centered {
+    display: block;
+    margin: 0 auto;
+}
+
 .subTitle {
     text-align: center;
     size: 1.5em;
     margin: 0;
-    padding: 10px;
+    text-transform: uppercase;
 }
 
 .rslides {
@@ -113,7 +124,6 @@
 }
 
 .rslides_tabs {
-    background-color: #373435;
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -122,17 +132,17 @@
 }
 
 .rslides_tabs li {
-    padding: 7px;
+    background-color: #373435;
     display:inline-block; 
     display:inline; /*IE7*/
     zoom:1; /*IE7*/
-    margin-right:10px;
 }
 
 .rslides_tabs a {
-     text-decoration: none;
-     font-size: 1.5em;
-     color: #FFF;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #FFF;
+    padding: 13px 20px;
 }
 
 .rslides_tabs .rslides_here a {

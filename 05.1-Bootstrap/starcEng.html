@@ -18,6 +18,8 @@
     <![endif]-->
 
     <link href='./lib/starcEng.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="./lib/bootStrapImageGallery/css/bootstrap-image-gallery.min.css">
 
   </head>
   <body data-spy='scroll' data-target='#namelist'>
@@ -156,15 +158,13 @@
         <div class='row'>
             <div class='col-md-8 col-md-offset-2'>
                 <h2 class='subTitle'>Projetos</h2>
-                <div>
-                    <ul class='rslides large-btns'>
-                        <li><img src='./lib/imgs/academia-da-alma-divulga.jpg' alt='academia da alma'></li>
-                        <li><img src='./lib/imgs/cartaz-retiro-ibc-2015.jpg' alt='retiro fam&iacute;lias'></li>
-                        <li><img src='./lib/imgs/dnadiscipulado-01.png' alt='dna discipulado'></li>
-                        <li><img src='./lib/imgs/ebd-divulgaa.jpg' alt='escola b&iacute;iblica dominical'></li>
-                        <li><img src='./lib/imgs/min-de-homens-face.jpg' alt='minist&eacute;rio de homens'></li>
-                        <li><img src='./lib/imgs/ministerio-de-mulheres-imagem.jpg' alt='minist&eacute;rio de mulheres'></li>
-                    </ul>
+                <div id="portfolio">
+                    <a href='./lib/imgs/academia-da-alma-divulga.jpg' title='academia da alma' data-gallery>1</a>
+                    <a href='./lib/imgs/cartaz-retiro-ibc-2015.jpg'  title='retiro fam&iacute;lias' data-gallery>1</a>
+                    <a href='./lib/imgs/dnadiscipulado-01.png' title='dna discipulado' data-gallery>1</a>
+                    <a href='./lib/imgs/ebd-divulgaa.jpg' title='escola b&iacute;iblica dominical' data-gallery>1</a>
+                    <a href='./lib/imgs/min-de-homens-face.jpg' title='minist&eacute;rio de homens' data-gallery>1</a>
+                    <a href='./lib/imgs/ministerio-de-mulheres-imagem.jpg' title='minist&eacute;rio de mulheres' data-gallery>1</a>
                 </div>
             </div>
         </div>
@@ -252,13 +252,50 @@
         </div>
     </div>
 
+    <!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+        <!-- The container for the modal slides -->
+        <div class="slides"></div>
+        <!-- Controls for the borderless lightbox -->
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+        <!-- The modal dialog, which will be used to wrap the lightbox content -->
+        <div class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body next"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left prev">
+                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            Previous
+                        </button>
+                        <button type="button" class="btn btn-primary next">
+                            Next
+                            <i class="glyphicon glyphicon-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type='text/javascript' src="./lib/jquery-1.11.2.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type='text/javascript' src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script type='text/javascript' src='./lib/responsiveslides.min.js'></script>
-    <script type='text/javascript' src='./lib/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js'>
+    <script type='text/javascript' src='./lib/bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js'></script>
 
+    <script src="https://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="./lib/bootStrapImageGallery/js/bootstrap-image-gallery.js"></script>
 
     <script>
         $('#mainContent').css('height', $(window).height());
@@ -269,12 +306,16 @@
     </script>
 
     <script>
-        $(function() {
-            $(".rslides").responsiveSlides({
-                auto: false,
-                pager: true
-            });
-        });
+        document.getElementById('portfolio').onclick = function (event) {
+            event = event || window.event;
+            event.preventDefault();
+            var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = {index: link, event: event},
+                links = this.getElementsByTagName('a');
+            console.log(blueimp);
+            blueimp.Gallery(links, options);
+        };
     </script>
   </body>
 </html>

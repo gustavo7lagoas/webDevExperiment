@@ -3,7 +3,7 @@
 }
 
 #mainContent {
-    background-image: url('./imgs/background_2.jpg');
+    background-image: url('../images/background_2.jpg');
     width: 100%;
     height: 600px;
     background-size: cover;
@@ -111,7 +111,7 @@
 
 .portfolio-element {
     width: 300px;
-    height: 230px;
+    height: 231px;
     padding: 15px;
     display: block;
 }

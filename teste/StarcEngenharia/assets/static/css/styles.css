@@ -1,0 +1,246 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* =Clearfix
+--------------------------------------------------------------------------------------------------------*/
+.clear { clear: both; }
+.clearfix:after { content: "."; display:block; height:0; clear:both; visibility:hidden; }/* ----- clear fix for floats ----- */
+.clearfix { display:inline-block; }
+* html .clearfix { height:1%; }/* hides clearfix from IE-mac */
+.clearfix { display:block; }/* end hide from IE-mac */
+.alignleft { float:left; }
+.alignright { float:right; }
+.aligncenter { margin:auto; display:block; }
+.alignnone { clear:both; font-size:0; line-height:0; margin:0; padding:0; border:0; height:0; width:0; }
+.centered { text-align:center; }
+/* End Clearfix
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Preloader
+--------------------------------------------------------------------------------------------------------*/
+#preloader { position:absolute; top:0; left:0; right:0; bottom:0; background-color:#000; z-index:9999; }
+#status { width:200px; height:200px; position:absolute; left:50%; top:50%; background-image:url(../images/ajax-loader.gif); background-repeat:no-repeat; background-position:center; margin:-100px 0 0 -100px; }
+/* End Preloader
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Typography
+--------------------------------------------------------------------------------------------------------*/
+html {overflow: -moz-scrollbars-vertical; overflow-y: scroll; }
+body { font: 18px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; color:#999; letter-spacing:-1px; background:url(../images/bg-html.png) repeat; overflow:hidden}
+strong { font-weight:bold; }
+a, a > * {-webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; }
+p { line-height:1.5; font-size:22px; font-weight:300; letter-spacing:-1px }
+.col2-3 p, .col1-1 p { padding:20px 40px 0px 40px; }
+.col1-3 p {position:absolute; bottom:0; }
+.col1-3 p { padding:0px 25px 21px 25px; }
+p.comments { padding:14px 40px 0px 40px; }
+.title p {font-size:15px; color:#a3a3a3; padding:0px 20px 0px 20px; font-weight:400; position:relative }
+.infos p {font-size:18px; padding:0px 20px 0px 20px; font-weight:400; }
+p.blockquote { font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-weight:normal; padding:21px 25px 20px 25px; clear:both }
+.blockquote span {font: 12px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; color:#777; text-transform:uppercase; letter-spacing:1px; }
+.col2-3 p.blockquote { padding:20px 40px 20px 40px; }
+.col1-1 p.blockquote { padding:20px 80px 0px 80px; }
+p span { font-style:italic;}
+a { color:#d4d4d4; text-decoration:none; }
+a:hover { text-decoration:none; /*color:#fff;*/ }
+/* End Typography
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Headings
+--------------------------------------------------------------------------------------------------------*/
+h1#logo { position:relative; width:256px; height:73px; padding-top:25px; padding-bottom:9px; margin:0 auto; }
+h1#logo a { display:block; background:url(../images/logos/logo0.png) no-repeat; background-size:256px 73px; width:256px; height:82px; text-indent:-9999px; }
+h2, h3, h4 { line-height:1.5; letter-spacing:-2px }
+h2 { font-size:37px; font-weight:700; color:#d4d4d4; padding:35px 40px 0px 40px; }
+h2.blog-heading { padding:31px 40px 0px 40px;  }
+.clients h2 {padding-bottom:23px; }
+.col1-3 h2 { padding:21px 25px 0px 25px; font-size:28px; text-transform:none }
+.col1-3.middle p {font-size:18px; text-align:center; padding:26px 60px 0px 60px; position:relative; color:#999; font-weight:normal; letter-spacing:-1px;  }
+.col1-3.middle p span {color:#999; font-size:12px; letter-spacing:1px; font-style:normal; font-weight:normal; }
+.col1-3.middle a {color:#999; }
+h3 { font-size:28px; font-weight:300; color:#999; padding:14px 50px 30px 40px; position:absolute; bottom:0; }
+h3 span {font-style:italic; }
+h3.blockquote { font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-weight:normal; font-size:27px; padding-bottom:29px; clear:both }
+h4 { font-size:20px; font-weight:700; color:#d4d4d4; padding:47px 40px 0px 40px; }
+.title h4 { color:#1b1c1e; padding:21px 20px 3px 20px; line-height:1; letter-spacing:-1px }
+.infos h4 { padding:25px 20px 0px 20px; line-height:1; }
+.number {position:absolute; right:45px; top:40px; display:inline-block; }
+/* End Headings
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Main Content
+--------------------------------------------------------------------------------------------------------*/
+.nav-wrapper:before {content:''; height:0; width:0; border-width:12px 12px 12px 12px; border-style:solid; border-color:rgba(251,251,251,1) rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0); position:absolute; bottom:-24px; left:50%; margin-left:-12px; }
+.nav-wrapper { width:940px; height:70px; float:left; margin:30px 10px; text-align:center; text-transform:uppercase; }
+.nav-wrapper a { width:100%; background:#fff; display:inline-block; height:50px; color:#242527; padding-top:20px; }
+#wrapper:before {content:''; height:0; width:0; border-width:12px 12px 12px 12px; border-style:solid; border-color:rgba(251,251,251,1) rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0); position:absolute; bottom:-24px; left:50%; margin-left:-12px; }
+#wrapper { margin-top:0px; position:relative; width:100%; left:0px; /*left:0;*/ background:#fff; top:0; min-height:100%;-webkit-box-shadow:0 1px 0 rgba(0, 0, 0, 0.1); -moz-box-shadow:0 1px 0 rgba(0, 0, 0, 0.1); box-shadow:0 1px 0 rgba(0, 0, 0, 0.1); }
+.container { padding:0px; width:960px; position:relative; margin:0 auto;}
+#container {  padding-bottom:50px; margin-top:30px;}
+.col1-1 { width:940px; margin:10px;  background-color:#222325; background-color: rgba(255,255,255,0.05); }
+.col1-1.no-border {width:940px; border:0; }
+.col1-3 { width:300px; height:300px; margin:10px; float:left; background-color:#222325; background-color: rgba(255,255,255,0.05);}
+.col1-3.clients {background:none }
+.col2-3 { width:620px; height:300px; margin:10px; float:left; background-color:#222325; background-color: rgba(255,255,255,0.05);}
+.col2-3.no-border {width:620px; height:300px; margin:10px; float:left; border:0px solid #0c0c0d;  -moz-box-shadow: inset 1px 1px 120px rgba(0, 0, 0, 0); -webkit-box-shadow: inset 1px 1px 120px rgba(0, 0, 0, 0); box-shadow: inset 1px 1px 120px rgba(0, 0, 0, 0);  background:none; }
+.col2-3.contact { width:620px; height:620px; margin:10px; float:left; border:0; }
+.col2-3.about { width:620px; height:620px; margin:10px; float:left; border:0; }
+.col2-3.services { width:620px; height:420px; margin:10px; float:left; border:0; }
+.col2-3.project { width:620px; height:420px; margin:10px; float:left; border:0; }
+.break { height:50px; position:relative; }
+.images { display:block; position:relative; }
+.title:before {content:''; height:0; width:0; border-width:12px 12px 12px 12px; border-style:solid; border-color:rgba(255,255,255,0) rgba(255,255,255,0) #fff rgba(255,255,255,0); position:absolute; top:-24px; left:50%; margin-left:-12px; }
+.title {height:84px; width:300px; background:#fff; position:absolute; bottom:0px; text-align:center }
+.logo { width:140px; height:103px; text-align:center; padding-top:37px; float:left; margin-right:20px; margin-bottom:20px; background-color:#222325; background-color: rgba(255,255,255,0.05);}
+.logo.last {margin-right:0px; }
+.logo.bottom {margin-bottom:0px; }
+.overflow {overflow:hidden; }
+.certificate {background:url(../images/bg-certificate.png) center top no-repeat; position:relative; width:100%; height:40px; margin-top:35px; padding-bottom:20px; }
+.award {background:url(../images/bg-award.png) center top no-repeat; position:relative; width:100%; height:40px; margin-top:35px; padding-bottom:20px;  }
+.barrier {height:1px; width:80px; margin:0 auto; position:relative; background:url(../images/bg-html.png) repeat; }
+.auto {height:auto !important; }
+/* =End Main Content
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Googlemaps
+--------------------------------------------------------------------------------------------------------*/
+#map {width:620px; height:620px; margin:0; border:0}
+#map:before, #map:after {	background: none; content: ''; left: 0;	position: absolute;	top: 0;	width: 100%; }
+#map:after {	bottom: 0; top: auto; }
+/* End Googlemaps
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Image Hover
+--------------------------------------------------------------------------------------------------------*/
+.images img {width:100%; display: block; max-width: 100% !important; z-index:9 }
+.infos {width:300px; height:300px; top:0; left:0px; border:0; padding:0; display:block; z-index:1; position:absolute; background:url(../images/bg-html.png) repeat #1b1c1e;}
+.movable-content {z-index:11; position:absolute; width:300px; height:300px; }
+.tab.first {margin-top:10px; }
+.tab {background-color:#222325; background-color: rgba(255,255,255,0.05); width:64px; height:64px; margin-bottom:8px; position:relative; display:inline-block; float:left }
+.hover-title:before {content:''; height:0; width:0; border-width:6px 6px 6px 6px; border-style:solid; border-color:rgba(255,255,255,0) #fff rgba(255,255,255,0) rgba(255,255,255,0); position:absolute; margin-left:-21px; margin-top:3px; }
+.hover-title { padding: 6px 9px 7px 9px; background-color: #fff; color: #1b1c1e; text-align:center; font-size: 12px; z-index: 8; letter-spacing:0px; margin-top:18px; margin-left:-3px; width:auto; display:none; position:absolute; -webkit-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.25); -moz-box-shadow: 0 0px 1px rgba(0, 0, 0, 0.25); box-shadow: 0 0px 1px rgba(0, 0, 0, 0.25); z-index:10}
+.hover-content {width:216px; height:300px; background-color:#222325; background-color: rgba(255,255,255,0.05); position:absolute; right:0; top:0; line-height:1.5 }
+span.blockquote { font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-weight:normal; clear:both }
+.hover-content span {line-height:1.5; position:absolute; padding:20px; padding-bottom:14px; bottom:0 }
+.icons { float:left;  height:64px; width:74px; margin:0px; display:inline-block }
+.tab .icons {width:64px }
+.blog .icons, .col1-1 .icons {position:absolute; top:0; left:0; float:none }
+.col1-1 .icons {left:15px; }
+.email {background:url(../images/bg-email.png) center no-repeat; background-size:24px 24px; }
+.xing {background:url(../images/bg-xing.png) center no-repeat; background-size:24px 24px; }
+.google {background:url(../images/bg-googleplus.png) center no-repeat; background-size:24px 24px; }
+.tweat {background:url(../images/bg-tweat.png) center no-repeat; background-size:24px 24px; }
+.facebook {background:url(../images/bg-facebook.png) center no-repeat; background-size:24px 24px; }
+.pinterest {background:url(../images/bg-pinterest.png) center no-repeat; background-size:24px 24px; }
+.instagram {background:url(../images/bg-instagram.png) center no-repeat; background-size:24px 24px; }
+.vimeo {background:url(../images/bg-vimeo.png) center no-repeat; background-size:24px 24px; }
+.skype {background:url(../images/bg-skype.png) center no-repeat; background-size:24px 24px; }
+.dribble {background:url(../images/bg-dribble.png) center no-repeat; background-size:24px 24px; }
+.view-more {background:url(../images/bg-view-more.png) center no-repeat; background-size:31px 17px;}
+.zoom {background:url(../images/bg-zoom.png) center no-repeat; background-size:25px 25px; }
+.link {background:url(../images/bg-link.png) center no-repeat; background-size:24px 24px; }
+.pdf {background:url(../images/bg-file.png) center no-repeat; background-size:24px 24px; }
+.video {background:url(../images/bg-video.png) center no-repeat; background-size:24px 24px; }
+.bubble {background:url(../images/bg-bubble.png) center no-repeat; background-size:24px 24px; }
+.quote {background:url(../images/bg-heart.png) center no-repeat; background-size:24px 24px; }
+.slideshow {background:url(../images/bg-slideshow.png) center no-repeat; background-size:28px 15px; }
+.aside {background:url(../images/bg-aside.png) center no-repeat; background-size:23px 23px; }
+.icon.close {background: url(../images/bg-close.png) center no-repeat #fff; height:58px; width:58px; float:none; display:block; z-index:101; position:absolute; right:40px; top:40px;}
+/* End Image Hover
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Blog
+--------------------------------------------------------------------------------------------------------*/
+.reply { font: 12px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; color:#fff; text-transform:uppercase; letter-spacing:1px; padding-top:4px; }
+.blog-icon {border-bottom:1px solid #151618; width:230px; height:26px; padding:19px 0px 19px 70px;  }
+/*.blog-icon .video {margin-top:1px !important; }*/
+.blog-icon.comment {width:815px; padding:19px 40px 19px 85px; }
+.padding-right {padding-right:20px; }
+.padding-left {padding-left:20px; }
+.reply-comment {border-bottom:1px solid #47484b; width:100%; height:1px; padding:51px 0 0 0; }
+/* End Blog
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Lists
+--------------------------------------------------------------------------------------------------------*/
+ul.list { position:absolute; padding:0 25px 21px 25px; bottom:0 }
+ul.list li { line-height:1.5; font-size:22px; font-weight:300; letter-spacing:-1px; width:auto; padding-left:28px; }
+ul.check li { background:url(../images/bg-check.png) no-repeat 1px 13px; background-size:13px 11px; }
+/* =End Lists
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Footer
+--------------------------------------------------------------------------------------------------------*/
+footer { width:100%; height:180px; margin:0px 0px 0 0px; padding:50px 0 0 0px; background-color:#222325; background-color: rgba(255,255,255,0.05); position:relative  }
+footer .barrier {margin-top:18px; }
+/* End Footer
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Social
+--------------------------------------------------------------------------------------------------------*/
+ul.social { margin-top:25px; margin-bottom:0px; letter-spacing:0; }
+.social li { display:inline-block; margin:0px 7px;}
+.social li a { display:block; -webkit-transition: all 0.3s ease 0s; -moz-transition: all 0.3s ease 0s; -o-transition: all 0.3s ease 0s; transition: all 0.3s ease 0s; }
+ul.social a {text-indent:-9000px; text-decoration:none; height:24px; width:24px;}
+/* End Social
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Isotope
+--------------------------------------------------------------------------------------------------------*/
+.isotope-item { z-index: 2; }
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+/**** Isotope CSS3 transitions ****/
+.isotope, .isotope .isotope-item { -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; -ms-transition-duration: 0.8s; -o-transition-duration: 0.8s; transition-duration: 0.8s; }
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property:    -moz-transform, opacity; -ms-transition-property:     -ms-transform, opacity; -o-transition-property:         top, left, opacity; transition-property:         transform, opacity; }
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+/* End: Recommended Isotope styles */
+
+/* disable CSS transitions for containers with infinite scrolling*/
+.isotope.infinite-scrolling { -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none; transition: none; }
+
+
+#options { width:100%; height:auto; position:relative; text-align:center; padding-bottom:9px; }
+#options ul { margin: 0 auto; list-style: none; text-align:center; display:inline-block; padding-top:0px;  }
+#options li {  float:left }
+#options li a { color:#a5a5a5; font-family: "Open Sans", Arial, Helvetica, sans-serif; font-size:13px; font-weight:normal; text-decoration:none; text-transform:uppercase; display:block; padding:0px 15px 10px 15px;  margin:0px; letter-spacing:1px; margin-top:10px }
+#options li a:hover, #options li a.selected { color:#242527; }
+
+#nav-button-wrapper {position:relative; padding:0px 0px 0 10px; width:100%; text-align:center; border-top:1px solid #ebebeb; height:46px; cursor:pointer; display:none }
+.nav-button {display:inline-block }
+.nav-button2 {position:absolute; right:28px; top:23px; }
+.nav-button2.center {right:97px; top:33px; }
+.nav-bar {background-color:#aaa; background-color:rgba(255,255,255,0.07); border-radius:1px; display:block; width:28px; height:4px; margin:3px auto; }
+.nav-button2 .nav-bar {background-color:#aaa; background-color:rgba(255,255,255,0.07); border-radius:1px; display:block; width:22px; height:3px; margin:2px auto; }
+#nav-button-wrapper .nav-bar {background-color:#242527; background-color:rgba(0,0,0,0.3); }
+#nav-button-wrapper {padding-top:15px; margin-top:10px; }
+
+
+a .element-bg {-webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s;}
+.element-bg {width:100%; height:100%;}
+a .element-bg:hover, a .blog-icon:hover { background-color:#292a2c; background-color: rgba(255,255,255,0.06); }
+a .tab:hover { background-color:#292a2c; background-color: rgba(255,255,255,0.10); }
+/* End Isotope
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* =Backtotop
+--------------------------------------------------------------------------------------------------------*/
+#backtotop { height:auto; position:fixed; right:30px; bottom:30px; display:none; z-index:30; }
+#backtotop ul { padding:15px 0px; }
+#backtotop ul li a { background:url(../images/bg-up.png) center 48% no-repeat #fff; background-size:22px 15px; display:block; width:50px; height:50px; float:right; right:10px; text-indent:-9000px; -webkit-box-shadow:0 0 30px rgba(0, 0, 0, 0.1); -moz-box-shadow:0 0 30px rgba(0, 0, 0, 0.1); box-shadow:0 0 30px rgba(0, 0, 0, 0.1);}
+#backtotop ul li a:hover { -webkit-box-shadow:0 0 30px rgba(0, 0, 0, 0); -moz-box-shadow:0 0 30px rgba(0, 0, 0, 0); box-shadow:0 0 30px rgba(0, 0, 0, 0); }
+/* End Backtotop
+--------------------------------------------------------------------------------------------------------*/

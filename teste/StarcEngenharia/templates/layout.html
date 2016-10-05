@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"  dir="ltr" lang="en-US"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<!-- Set the viewport width to device width for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="author" content="ppandp">
+<meta name="Description" content="theArchitect - Responsive Retina-Ready HTML5 One-Page" />
+<link href="{{ '/static/css/reset.css'|url }}" rel="stylesheet" type="text/css" media="screen" />
+<link href="{{ '/static/css/contact.css'|url }}" rel="stylesheet" type="text/css" media="screen" />
+<link href="{{ '/static/css/styles.css'|url }}" rel="stylesheet" type="text/css" media="screen" />
+<link href="{{ '/static/css/flexslider.css'|url }}" rel="stylesheet" type="text/css" media="screen">
+<link href="{{ '/static/css/jquery.fancybox.css'|url }}" rel="stylesheet" type="text/css" media="screen" />
+<!--[if gt IE 8]><!--><link href="{{ '/static/css/retina-responsive.css'|url }}" rel="stylesheet" type="text/css" media="screen" /><!--<![endif]-->
+<!--[if !IE]> <link href="{{ '/static/css/retina-responsive.css'|url }}" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
+<!--[if lt IE 9]> <link href="{{ '/static/css/styles-ie8.css'|url }}" rel="stylesheet" type="text/css" media="screen" /> <![endif]-->
+<link href="{{ '/static/css/print.css'|url }}" rel="stylesheet" type="text/css" media="print" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,600,800' rel='stylesheet' type='text/css' />
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery-1.9.1.min.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery-easing-1.3.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/modernizr.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/custom.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery.gomap-1.3.2.min.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery.isotope.min.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery.ba-bbq.min.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery.isotope.load_home.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/jquery.form.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/input.fields.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/responsive-nav.js'|url }}" type="text/javascript"></script>
+<script defer src="{{ '/static/js/jquery.flexslider-min.js'|url }}"></script>
+<script src="{{ '/static/js/jquery.fancybox.pack.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/scrollup.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/preloader.js'|url }}" type="text/javascript"></script>
+<script src="{{ '/static/js/retina.js'|url }}" type="text/javascript"></script>
+<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<title>{% block title %}Welcome{% endblock %} — StarcEngenharia</title>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <header id="wrapper">
+        <div class="container clearfix">
+            <h1 id="logo"><a href="{{ '/'|url }}">Starc Engenharia</a></h1>
+            <!-- start navi -->
+            <div id="options" class="clearfix">
+                <ul id="filters" class="option-set clearfix">
+                    <li><a href="#filter=.home" class="selected">Home</a></li>
+                    <li><a href="#filter=.services">Serviços</a></li>
+                    <li><a href="#filter=.clients">Clientes</a></li>
+                    <li><a href="{{ '/projects'|url }}#filter=.portfolio">Portfolio</a></li>
+                    <li><a href="#filter=.about">Empresa</a></li>
+                    <li><a href="#filter=.contact">Contato</a></li>
+                </ul>
+            </div>
+            <div id="nav-button-wrapper">
+                <div class="nav-button"><a href="#" onClick="return false"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </a></div>
+            </div>
+            <!-- end nav -->
+        </div>
+    </header>
+    <!-- end header -->
+    <div class="container">
+        <div id="container" class="clearfix">
+            {% block body %}{% endblock %}
+        </div>
+    </div>
+    <footer class="centered">
+        © 2016, Starc Engenharia.
+        <ul class="social clearfix">
+            <li class="tweat"><a href="#" onClick="return false">Visit our twitter Account</a></li>
+            <li class="facebook"><a href="#" onClick="return false">Visit our facebook Account</a></li>
+            <li class="dribble"><a href="#" onClick="return false">Visit our dribble Account</a></li>
+            <li class="vimeo"><a href="#" onClick="return false">Visit our vimeo Account</a></li>
+            <li class="google"><a href="#" onClick="return false">Visit our googleplus Account</a></li>
+        </ul>
+    </footer>
+    <!-- end container -->
+    <!-- BACK TO TOP BUTTON -->
+    <div id="backtotop">
+        <ul>
+            <li><a id="toTop" href="#" onClick="return false">Back to Top</a></li>
+        </ul>
+    </div>
+</body>

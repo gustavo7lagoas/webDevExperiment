@@ -1,0 +1,35 @@
+
+
+#contact p, label, legend {  }
+
+
+#contact { display: block; width: auto; margin: 0; padding: 0px; border: none; overflow:visible }
+
+/* Form style */
+
+#contact label { display: none; float: none; height:0px; }
+input, textarea, select { width:250px; height:26px; padding:20px 25px; font: 18px 'Open Sans', 'Helvetica Neue', Arial, Helvetica, sans-serif; color:#999; border:0; border-bottom:1px solid #151618; background:none; letter-spacing:-1px; -webkit-transition: all 0.2s ease 0s; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; float:none; display:block;}
+input.first {border-top:0px solid #1a1a1c; }
+#contact input.third { margin: 0px 0px 0px 0 !important; }
+#contact textarea { margin-bottom:0px; margin-right:0px !important; width:184px; border:0px; border-right:1px solid #151618; }
+#contact #subject { width: 292px !important; }
+input:focus, textarea:focus, select:focus { background-color:#292a2c; background-color: rgba(255,255,255,0.06); }
+input.submit { display:block; position:absolute; bottom:0px; right:0px; width:65px; height:99px; -moz-transition: all 0.2s ease 0s; -o-transition: all 0.2s ease 0s; transition: all 0.2s ease 0s; border:0px; padding:0px; background:url(../images/bg-submit.png) center center no-repeat; background-size:24px 28px; text-indent:-9999px; cursor:pointer;}
+#contact input.submit:hover { background-color:#292a2c; background-color: rgba(255,255,255,0.06); }
+
+
+#contact fieldset { padding-left:0px;}
+
+#contact span.required { padding-left:28px; background:url(../images/bg-bullet.png) no-repeat 12px 5px; margin-left:-28px; }
+
+#message { margin: 0; padding: 0px; z-index:5500; position:absolute !important; top:-1px; left:-1px; background:#fff; height:auto; text-align:center }
+#success_page { width:300px; height:300px; cursor:default; }
+#success_page h2 { padding:47px 20px 20px 20px !important; font-size:28px !important; text-transform:none; color:#242527; line-height:1.35 }
+#success_page p {position:relative !important; padding-bottom:30px; color:#969696; line-height:1.45; font-weight:400 }
+
+.error_message { display: block; width:260px; height:auto; padding:19px 20px 19px 20px; background: #FBE3E4; color:#8a1f11; cursor:pointer  }
+
+.loader { padding: 22px 0 0 10px; }
+
+#contact .padding-right {padding-right:20px; }
+#comments {height: 59px; }

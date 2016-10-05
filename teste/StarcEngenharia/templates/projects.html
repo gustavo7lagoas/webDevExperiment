@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+<div class="element clearfix col1-3 portfolio portfolio2  overflow">
+    <div class="movable-content">
+        <div class="images"><img src="{{ '/static/images/arbor_1.jpg'|url }}" alt="" /></div>
+        <div class="title">
+            <h4>Arbor Café</h4>
+            <p>Obra</p>
+        </div>
+    </div>
+    <div class="infos">
+        <div class="nav-button2 center"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
+        <a href="{{ '/projects/arbor_cafe'|url }}#filter=.detail2" class="tippy">
+            <div class="tab"><i class="icons view-more"></i></div>
+            <div class="alignleft">
+                <div class="hover-title">View Info</div>
+            </div>
+        </a>
+        <div class="clear"></div>
+        <a class="video-popup tippy" href="http://player.vimeo.com/video/38370036?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff">
+            <div class="tab"><i class="icons video"></i></div>
+            <div class="alignleft">
+                <div class="hover-title">Video in Lightbox</div>
+            </div>
+        </a>
+        <div class="clear"></div>
+        <a href="#" onClick="return false" class="tippy">
+            <div class="tab last"><i class="icons link"></i></div>
+            <div class="alignleft">
+                <div class="hover-title">Visit Website</div>
+            </div>
+        </a>
+        <div class="hover-content"><span>Cliente: Arbor Café<br />
+            Data: Setembro 2015<br />
+            Tipo: Comercial<br />
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,20 +1,22 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+{% for project in site.get('/projects').children %}
+{% set image = project.attachments.images.first() %}
 <div class="element clearfix col1-3 portfolio portfolio2  overflow">
     <div class="movable-content">
-        <div class="images"><img src="{{ '/static/images/arbor_1.jpg'|url }}" alt="" /></div>
+        <div class="images"><img src="{{ image|url }}" alt="" /></div>
         <div class="title">
-            <h4>Arbor Café</h4>
+            <h4>{{ project.name }}</h4>
             <p>Obra</p>
         </div>
     </div>
     <div class="infos">
         <div class="nav-button2 center"> <span class="nav-bar"></span> <span class="nav-bar"></span> <span class="nav-bar"></span> </div>
-        <a href="{{ '/projects/arbor_cafe'|url }}#filter=.detail2" class="tippy">
+        <a href="{{ project|url }}#filter=.{{ project.id }}" class="tippy">
             <div class="tab"><i class="icons view-more"></i></div>
             <div class="alignleft">
-                <div class="hover-title">View Info</div>
+                <div class="hover-title">Ver Detalhes</div>
             </div>
         </a>
         <div class="clear"></div>
@@ -28,13 +30,14 @@
         <a href="#" onClick="return false" class="tippy">
             <div class="tab last"><i class="icons link"></i></div>
             <div class="alignleft">
-                <div class="hover-title">Visit Website</div>
+                <div class="hover-title">Website</div>
             </div>
         </a>
-        <div class="hover-content"><span>Cliente: Arbor Café<br />
+        <div class="hover-content"><span>Cliente: {{ project.name }}<br />
             Data: Setembro 2015<br />
             Tipo: Comercial<br />
         </div>
     </div>
 </div>
+{% endfor %}
 {% endblock %}

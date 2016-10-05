@@ -90,6 +90,7 @@ h4 { font-size:20px; font-weight:700; color:#d4d4d4; padding:47px 40px 0px 40px;
 .col2-3.contact { width:620px; height:620px; margin:10px; float:left; border:0; }
 .col2-3.about { width:620px; height:620px; margin:10px; float:left; border:0; }
 .col2-3.services { width:620px; height:420px; margin:10px; float:left; border:0; }
+.col2-3.clients { width:620px; height:420px; margin:10px; float:left; border:0; }
 .col2-3.project { width:620px; height:420px; margin:10px; float:left; border:0; }
 .break { height:50px; position:relative; }
 .images { display:block; position:relative; }

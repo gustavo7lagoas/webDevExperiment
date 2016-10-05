@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
-{% block title %}{{ this.title }}{% endblock %}
+{% block title %}{{ this.name }}{% endblock %}
 {% block body %}
-<div class="element detail2 clearfix col1-1 auto no-border">
+<div class="element {{ this.id }} clearfix col1-1 auto no-border">
     <div class="flexslider">
         {% set images = this.attachments.images.all() %}
         {% if images %}
@@ -11,25 +11,25 @@
                 <li><img src="{{ image|url }}" alt="{{ this.name }}" /></li>
                 {% endfor %}
             </ul>
-            <a href="#filter=.portfolio">
+            <a href="{{ '/projects'|url }}#filter=.portfolio">
                 <div class="icon close"></div>
             </a>
         </div>
         {% endif %}
     </div>
 </div>
-<div class="element detail2 clearfix col1-3">
+<div class="element {{ this.id }} clearfix col1-3">
     <h2>{{ this.name }}</h2>
     <ul class="list check">
         <li>Cliente: {{ this.name }}</li>
         <li>Data: Novembro 2015</li>
     </ul>
 </div>
-<div class="element detail2 clearfix col2-3">
+<div class="element {{ this.id }} clearfix col2-3">
     <h2>{{ this.name }}</h2>
     <h3>Lorem ipsum dolor sit amet, <span>consectetur adipiscing</span> elit. Vestibulum id ligula felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla.</h3>
 </div>
-<div class="element detail2 clearfix col1-3">
+<div class="element {{ this.id }} clearfix col1-3">
     <p class="blockquote">“ This could be a blockquote alright. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio. ” <span><br />
         John Doe, Company Name</span>
     </p>
